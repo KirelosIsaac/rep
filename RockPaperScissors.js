@@ -9,10 +9,12 @@ window.onload= function()
   }
   else
   {
-    score.wins=0;
-    score.losses=0; 
-    score.Draw=0; 
-    score.Tries=0;
+    score={
+      wins:0,
+      losses:0, 
+      Draw:0,
+      Tries:0
+    };
     temp.textContent='Wins:0, Losses:0, Draws:0, Tries:0';
   }
   }
@@ -99,10 +101,12 @@ function startGame(choise)
   score= JSON.parse(localStorage.getItem('score'));
   if(!score) //empty
   {
-    score.wins=0;
-    score.losses=0; 
-    score.Draw=0; 
-    score.Tries=0;
+    score={
+      wins:0,
+      losses:0, 
+      Draw:0,
+      Tries:0
+    };
   }
 
   /*update score */
@@ -134,4 +138,3 @@ function startGame(choise)
   /*permenant storage */
   localStorage.setItem('score', JSON.stringify(score));
 };
-
