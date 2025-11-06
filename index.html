@@ -1,76 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body{
-      background-image: url("bk2.jpg");
-      background-size: cover;
-      margin:0;
-      padding:0;
-      align-items: center;
-    }
-    .header1
-    {
-      background-color: rgb(0, 0, 0);
-      border-radius: 50%;
-      text-align: center;
-      color: blue;
-    }
-
-    .paragraph1
-    {
-      font-size: 25px;
-      text-align: center;
-
-    }
-    .buttons{
-      display: flex;
-      gap:70px;
-      justify-content: center;
-      padding: 1em;
-      border: none;
-      background: transparent;
-      
-    }
-    .videoClass
-    {
-      display: block;
-      margin: 0 auto;
-    }
-    .resetButton
-    {
-      display: block;
-      margin-left: 5%;
-    }
-
-  </style>
-<title>Rock Paper Scissors Game</title>
-
-<script src="RockPaperScissors.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TriFusion Management GmbH</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+        header {
+            background-color: #004080;
+            color: white;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        header img {
+            max-width: 150px;
+            height: auto;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            background-color: #003366;
+            overflow: hidden;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #0059b3;
+        }
+        section {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            scroll-margin-top: 60px;
+        }
+        h2 {
+            color: #004080;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .info-table td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .info-table td:first-child {
+            font-weight: bold;
+            width: 40%;
+        }
+        .manager-card {
+            background: #f9f9f9;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 4px solid #004080;
+        }
+        .manager-card strong {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 1.1em;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #003366;
+            color: white;
+        }
+    </style>
 </head>
-
 <body>
-<h1 class="header1">Rock Paper Scissors Game</h1>
-<hr>
-
-<pre class="paragraph1">rock     paper   scissors</pre>
-
-<div class="buttons">
-<button onclick="startGame('rock')"><img     style="width: 50px;" src="rock.jpg" alt="Rock image"></button>
-<button onclick="startGame('paper')"><img    style="width: 50px;" src="paper.jpg" alt="Paper image"></button>
-<button onclick="startGame('scissors')"><img style="width: 50px;" src="scissors.jpg" alt="Scissors image"></button>
-</div>
-
-
-<p id="scoreID" style="font-size: 25px;"><b>Wins:0, Losses:0, Draws:0, Tries:0</b></p>
-<button class="resetButton" onclick="resetScore()">Reset Score</button>
-<p id="result" style="font-size: 20px;">result</p>
-
-<video class="videoClass" id="videoID" width="320" height="240"><source src="paper scissors.mp4" type="video/mp4">you didn't started playing yet
-</video>
+    <header>
+        <img src="logo.png" alt="TriFusion Management GmbH Logo">
+        <h1>TriFusion Management GmbH</h1>
+    </header>
+    <nav>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#hotelmanagement">Hotel Management</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="about">
+        <h2>About Us</h2>
+        <table class="info-table">
+            <tr>
+                <td>HRB Number:</td>
+                <td>HRB 23694</td>
+            </tr>
+            <tr>
+                <td>Registered Court:</td>
+                <td>Amtsgericht Mönchengladbach</td>
+            </tr>
+            <tr>
+                <td>Legal Form:</td>
+                <td>GmbH (Limited Liability Company)</td>
+            </tr>
+            <tr>
+                <td>Share Capital:</td>
+                <td>€25,000.00</td>
+            </tr>
+            <tr>
+                <td>Company Agreement:</td>
+                <td>June 13, 2025</td>
+            </tr>
+            <tr>
+                <td>Last Amendment:</td>
+                <td>October 13, 2025</td>
+            </tr>
+            <tr>
+                <td>Latest Registration Entry:</td>
+                <td>October 28, 2025</td>
+            </tr>
+        </table>
+        
+        <h3>Managing Directors (Geschäftsführer)</h3>
+        <p>All managing directors have authority to conduct legal transactions on behalf of the company, including the power to act under § 181 BGB.</p>
+        
+        <div class="manager-card">
+            <strong>Harari, Masiulla</strong>
+            Location: Grevenbroich
+        </div>
+        
+        <div class="manager-card">
+            <strong>Taghadossi, Sayed Tahir</strong>
+            Location: Grevenbroich
+        </div>
+        
+        <div class="manager-card">
+            <strong>Youssef, Mina Isaac Roshdi</strong>
+            Location: Düsseldorf
+        </div>
+        
+        <p style="margin-top: 20px;">TriFusion Management GmbH specializes in comprehensive management and consulting in the hotel and hospitality industry. We offer customized solutions for hotel operations of all sizes.</p>
+    </section>
+    <section id="services">
+        <h2>Services</h2>
+        <ul>
+            <li>Management consulting for hotels and hospitality businesses</li>
+            <li>Optimization of operational processes</li>
+            <li>Financial and controlling services</li>
+            <li>Marketing and guest management</li>
+            <li>Personnel management and training</li>
+        </ul>
+    </section>
+    <section id="hotelmanagement">
+        <h2>Hotel Management</h2>
+        <p>We offer tailored solutions for hotel operations:</p>
+        <ul>
+            <li>Hotel operation and organization</li>
+            <li>Quality management and guest services</li>
+            <li>Strategic planning and revenue enhancement</li>
+            <li>Digital tools for more efficient management</li>
+        </ul>
+        
+        <h3 style="margin-top: 30px;">Representation Rules</h3>
+        <ul>
+            <li>With one managing director: sole representation authority</li>
+            <li>With multiple directors: represented by two directors jointly, or one director together with a holder of general commercial power of attorney (Prokurist)</li>
+            <li>Individual representation authority can be granted by shareholder resolution</li>
+        </ul>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p><strong>TriFusion Management GmbH</strong></p>
+        <p>Registered Seat: Grevenbroich</p>
+        <p>Business Address: Am Flutgraben 53, 41515 Grevenbroich</p>
+        <p>Telephone: [To be provided]</p>
+        <p>Email: [To be provided]</p>
+    </section>
+    <footer>
+        &copy; 2025 TriFusion Management GmbH. All rights reserved.
+    </footer>
 </body>
-
 </html>
